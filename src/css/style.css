@@ -3,9 +3,79 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html {
+  font-family: "Anek Latin", sans-serif;
+}
+
+/* General */
 body {
-  background-color: #000;
+  background-color: #f7f8f9;
+  color: #0f1419;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Bar */
+.bar {
+  height: 8px;
+  background-color: #1da1f2;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/* Header */
+header {
+  padding: 32px 16px;
+  text-align: center;
+}
+header h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 520px) {
+  header h1 {
+    font-size: 32px;
+  }
+}
+
+/* Form */
+
+/* Tweet Desk */
+
+/* Footer */
+footer {
+  padding: 32px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e8698;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  border-bottom: 1px solid #6e8698;
+  border-bottom-style: dotted;
+}
+@media (hover: hover) {
+  footer a:hover {
+    border-bottom-style: solid;
+  }
+}
+@media (hover: none) {
+  footer a:hover {
+    border-bottom-style: solid;
+  }
 }
