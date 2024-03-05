@@ -88,16 +88,161 @@
     </header>
 
     <!-- Container -->
-    <main></main>
+    <main>
+      <!-- Form -->
+      <div class="form">
+        <h2>Details</h2>
+
+        <div class="form-control upload">
+          <label for="avatar">
+            Upload Profile Picture
+            <input
+              type="file"
+              id="avatar"
+              class="file"
+              name="avatar"
+              accept="image/png, image/jpeg"
+            />
+          </label>
+
+          <p id="file-name" class="file-name"></p>
+
+          <button id="reset" class="reset" type="reset">Reset</button>
+        </div>
+
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+          <small> <span class="count">0</span>/50 characters </small>
+        </div>
+
+        <div class="form-control">
+          <label for="username">Username</label>
+
+          <div class="username-input">
+            @
+            <input type="text" id="username" />
+          </div>
+
+          <small>
+            <span class="count">0</span>/15 characters. Only numbers, letters or
+            _ characters
+          </small>
+        </div>
+
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea id="message" rows="3"></textarea>
+
+          <small> <span class="count">0</span>/280 characters </small>
+        </div>
+
+        <!-- Time -->
+        <div class="form-control">
+          <label for="time">Time</label>
+          <input type="text" id="time" />
+          <small>hh:mm format</small>
+        </div>
+
+        <!-- Date -->
+        <div class="form-control">
+          <label for="date">Date</label>
+          <input type="text" id="date" />
+          <small>mmm dd, yyyy format</small>
+        </div>
+
+        <!-- Option Selection -->
+        <div class="form-control">
+          <label for="client">Client</label>
+          <input type="text" id="client" />
+          <small
+            >Twitter for iPhone, Twitter for Android, Twitter Web App,
+            etc.</small
+          >
+        </div>
+
+        <!-- Counts -->
+        <div class="form-control">
+          <label for="retweets">Retweets Count</label>
+          <input type="number" id="retweets" />
+        </div>
+        <div class="form-control">
+          <label for="quotes">Quotes Tweets Count</label>
+          <input type="number" id="quotes" />
+        </div>
+        <div class="form-control">
+          <label for="likes">Likes Count</label>
+          <input type="number" id="likes" />
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-control">
+          <p>Theme</p>
+
+          <div class="group">
+            <label class="radio-container">
+              Light
+              <input
+                type="radio"
+                name="theme-radio"
+                value="light"
+                checked="checked"
+              />
+              <span class="radio-mark"></span>
+            </label>
+
+            <label class="radio-container">
+              Dim
+              <input type="radio" name="theme-radio" value="dim" />
+              <span class="radio-mark"></span>
+            </label>
+
+            <label class="radio-container">
+              Light
+              <input type="radio" name="theme-radio" value="dark" />
+              <span class="radio-mark"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Verified Badge -->
+        <div class="form-control">
+          <p>Verified Badge</p>
+
+          <div class="group">
+            <label class="radio-container">
+              Show
+              <input type="radio" name="verified-radio" value="show" />
+              <span class="radio-mark"></span>
+            </label>
+            <label class="radio-container">
+              Hide
+              <input
+                type="radio"
+                name="verified-radio"
+                value="hide"
+                checked="checked"
+              />
+              <span class="radio-mark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tweet Desk -->
+      <div class="tweet-desk">
+        <h2>Preview</h2>
+
+        <div id="tweet-box" class="tweet-box"></div>
+
+        <button id="download" class="btn" type="button">Download</button>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer>
-      <p>View on <a href="" target="_blank" rel="noreferrer">GitHub</a></p>
-      <div class="dot"></div>
-      <p>
-        Built by
-        <a href="" target="_blank" rel="noreferrer">JR.Pranav</a>
-      </p>
+      Copyright &copy; by
+      <a href="" target="_blank" rel="noreferrer">JR.Pranav</a>
     </footer>
     <div class="bar"></div>
 
