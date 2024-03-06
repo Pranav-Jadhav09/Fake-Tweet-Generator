@@ -61,6 +61,8 @@ main {
   display: flex;
   align-items: flex-start;
 }
+
+/* Form */
 main .form {
   border: 1px solid #dde7ef;
   background-color: #fff;
@@ -105,7 +107,52 @@ main .form .form-control textarea::placeholder {
   color: #9ca1a5;
 }
 
-/* Form */
+main .form .form-control textarea {
+  resize: vertical;
+}
+main .form .form-control small {
+  font-size: 13px;
+  color: #8c9094;
+}
+
+main .form .form-control .username-input {
+  display: block;
+  background-color: white;
+  color: #8c9094;
+  font: inherit;
+  width: 100%;
+  padding: 0 14px;
+  margin: 4px 0;
+  border: 1px #cbd5e1 solid;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 200ms ease-in, color 200ms ease-in;
+  display: flex;
+  align-items: center;
+}
+
+main .form .form-control .username-input:focus-within {
+  border-color: #1da1f2;
+  color: #0f1419;
+}
+
+main .form .form-control .username-input::placeholder {
+  color: #9ca1a5;
+}
+main .form .form-control .username-input input {
+  display: inline;
+  margin: 0 0 0 2px;
+  padding: 10px 0;
+  border: none;
+}
+
+main .form .form-control input[type="radio"] {
+  display: inline;
+  width: fit-content;
+}
+main .form .form-control input[type="radio"] + label {
+  display: inline;
+}
 
 /* Tweet Desk */
 
