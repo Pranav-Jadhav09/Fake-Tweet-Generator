@@ -153,6 +153,179 @@ main .form .form-control input[type="radio"] {
 main .form .form-control input[type="radio"] + label {
   display: inline;
 }
+main .form .form-control p {
+  font-weight: 500;
+}
+main .form .form-control .group {
+  margin-top: 10px;
+  display: flex;
+}
+main .form .form-control .group .radio-container {
+  display: block;
+  position: relative;
+  padding-left: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+main .form .form-control .group .radio-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+main .form .form-control .group .radio-mark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 1px #aab8c2 solid;
+  border-radius: 50%;
+  background-color: white;
+}
+main .form .form-control .group .radio-container input:focus ~ .radio-mark {
+  box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.4);
+}
+main .form .form-control .group .radio-container input:checked ~ .radio-mark {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+main .form .form-control .group .radio-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+main
+  .form
+  .form-control
+  .group
+  .radio-container
+  .input:checked
+  ~ .radio-mark:after {
+  display: block;
+}
+main .form .form-control .group .radio-container .radio-mark:after {
+  top: 3px;
+  left: 3px;
+  width: 3px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+main .form .form-control.upload {
+  margin-bottom: 42px;
+  display: flex;
+  position: relative;
+}
+main .form .form-control.upload label {
+  display: inline-block;
+  position: relative;
+  border-radius: 99px;
+  background-color: #1da1f2;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  main .form .form-control.upload label {
+    transition: background 200ms ease-in;
+  }
+  main .form .form-control.upload label:hover {
+    background-color: #1a90d9;
+  }
+}
+@media (hover: none) {
+  main .form .form-control.upload label:active {
+    background-color: #1a90d9;
+  }
+}
+
+main .form .form-control.upload .file {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: -10;
+}
+main .form .form-control.upload .file-name {
+  font-size: 13px;
+  font-weight: 400;
+  position: absolute;
+  bottom: -29px;
+  background-color: #eef3f7;
+  color: #0f1419;
+  border-radius: 99px;
+  padding: 4px 16px;
+  display: none;
+}
+main .form .form-control.upload .file-name.show {
+  display: block;
+}
+
+/* Reset Button */
+main .form .form-control.upload .reset {
+  border: 1px #1da1f2 solid;
+  border-radius: 99px;
+  background-color: white;
+  color: #1da1f2;
+  font: inherit;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-left: 12px;
+}
+@media (hover: hover) {
+  main .form .form-control.upload .reset {
+    transition: background 200ms ease-in;
+  }
+  main .form .form-control.upload .reset:hover {
+    background-color: #e6e8eb;
+  }
+}
+@media (hover: none) {
+  main .form .form-control.upload .reset:active {
+    background-color: #e6e8eb;
+  }
+}
+@media (max-width: 890px) {
+  main .form {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  main .form {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  main .form {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 520px) {
+  main .form {
+    background-color: #f7f8f9;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 24px 0;
+  }
+}
 
 /* Tweet Desk */
 
