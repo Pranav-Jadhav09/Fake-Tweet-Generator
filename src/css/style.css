@@ -465,6 +465,50 @@ main .tweet-desk .tweet .stats .stat.hide {
   }
 }
 
+/* Tail */
+main .tweet-desk .tweet .tail {
+  border-top: 1px #eff3f4 solid;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+}
+main .tweet-desk .tweet .tail svg {
+  color: #536471;
+}
+
+/* Dim Theme */
+main .tweet-desk .tweet.dim {
+  background-color: #15202b;
+  color: white;
+}
+main .tweet-desk .tweet.dim .head .title .text .top .verifed {
+  color: white;
+}
+main .tweet-desk .tweet.dim .head .title .text .bottom,
+main .tweet-desk .tweet.dim .head .title .text .dots {
+  color: #798a96;
+}
+main .tweet-desk .tweet.dim .content .tweet-info {
+  color: #798a96;
+}
+main .tweet-desk .tweet.dim .content .tweet-info .tweet-client {
+  color: #1b95e0;
+}
+
+main .tweet-desk .tweet.dim .stats {
+  border-top: 1px #38444d solid;
+  color: #798a96;
+}
+main .tweet-desk .tweet.dim .stats .stat .count {
+  color: white;
+}
+main .tweet-desk .tweet.dim .tail {
+  border-top: 1px #38444d solid;
+}
+main .tweet-desk .tweet.dim .tail .svg {
+  color: #798a96;
+}
+
 /* Footer */
 footer {
   padding: 32px 16px;
