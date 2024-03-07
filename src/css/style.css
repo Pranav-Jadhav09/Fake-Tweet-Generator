@@ -509,6 +509,114 @@ main .tweet-desk .tweet.dim .tail .svg {
   color: #798a96;
 }
 
+/* Dark Theme */
+main .tweet-desk .tweet.dark {
+  background-color: #000;
+  color: #d9d9d9;
+}
+main .tweet-desk .tweet.dark .head .title .text .top .verifed {
+  color: #d9d9d9;
+}
+main .tweet-desk .tweet.dark .head .title .text .bottom,
+.main .tweet-desk .tweet.dark .head .title .text .dots {
+  color: #6e767d;
+}
+main .tweet-desk .tweet.dark .content .tweet-info {
+  color: #6e767d;
+}
+main .tweet-desk .tweet.dark .content .tweet-info .tweet-client {
+  color: #1b95e0;
+}
+main .tweet-desk .tweet.dark .stats {
+  border-top: 1px #2f3336 solid;
+  color: #6e767d;
+}
+main .tweet-desk .tweet.dark .stats .stat .count {
+  color: #d9d9d9;
+}
+main .tweet-desk .tweet.dark .tail {
+  border-top: 1px #2f3336 solid;
+}
+main .tweet-desk .tweet.dark .tail svg {
+  color: #6e767d;
+}
+@media (max-width: 395px) {
+  main .tweet-desk .tweet {
+    font-size: 14px;
+  }
+  main .tweet-desk .tweet .content .message {
+    font-size: 21px;
+  }
+  main .tweet-desk .tweet .stats {
+    padding: 16px 0;
+  }
+  main .tweet-desk .tweet .stats .stat {
+    margin-right: 8px;
+  }
+}
+
+/* Download Button */
+main .tweet-desk .btn {
+  display: block;
+  border: none;
+  border-radius: 6px;
+  border-radius: 99px;
+  font: inherit;
+  margin: auto;
+  color: white;
+  padding: 11px 33px;
+  cursor: pointer;
+  background-color: #1da1f2;
+}
+@media (hover: hover) {
+  main .tweet-desk .btn {
+    transition: background 200ms ease-in;
+  }
+  main .tweet-desk .btn:hover {
+    background-color: #1a90d9;
+  }
+}
+@media (hover: none) {
+  main .tweet-desk .btn:active {
+    background-color: #1a90d9;
+  }
+}
+
+/* Tweet Desk Media Queries */
+@media (max-width: 890px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  main .tweet-desk {
+    width: 75%;
+    position: static;
+    margin: 0 auto 16px;
+  }
+}
+@media (max-width: 700px) {
+  main .tweet-desk {
+    width: 85%;
+    margin: 0 auto 16px;
+  }
+}
+@media (max-width: 640px) {
+  main .tweet-desk {
+    width: 95%;
+    margin: 0 auto 16px;
+  }
+}
+@media (max-width: 520px) {
+  main .tweet-desk {
+    background-color: #f7f8f9;
+    width: 100%;
+    margin: 0 auto 16px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 24px 0;
+  }
+}
+
 /* Footer */
 footer {
   padding: 32px 16px;
