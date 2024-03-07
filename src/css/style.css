@@ -328,6 +328,142 @@ main .form .form-control.upload .reset {
 }
 
 /* Tweet Desk */
+main .tweet-desk {
+  background-color: white;
+  border: 1px #dde7ef solid;
+  border-radius: 8px;
+  padding: 24px;
+  margin-left: 16px;
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+}
+main .tweet-desk h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+main .tweet-desk .tweet-box {
+  border: 1px #eff3f4 solid;
+  background-color: white;
+  margin: 32px 0 34px;
+  width: 440px;
+}
+main .tweet-desk .tweet-desk.dim {
+  border: 1px #15202b solid;
+  background-color: #15202b;
+}
+main .tweet-desk .tweet-box.dark {
+  border: 1px #000 solid;
+  background-color: #000;
+}
+main .tweet-desk .tweet-box.dark {
+  border: 1px #000 solid;
+  background-color: #000;
+}
+@media (max-width: 940px) {
+  main .tweet-desk .tweet-box {
+    width: 400px;
+  }
+}
+@media (max-width: 890px) {
+  main .tweet-desk .tweet-box {
+    max-width: 440px;
+    width: 100%;
+    margin: 32px auto;
+  }
+}
+
+main .tweet-desk .tweet {
+  border: 1px transparent solid;
+  background-color: white;
+  padding: 0 16px;
+  font-size: 15px;
+  width: 100%;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Head Desk */
+main .tweet-desk .tweet .head {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+main .tweet-desk .tweet .head .title {
+  display: flex;
+  align-items: center;
+}
+main .tweet-desk .tweet .head .title img {
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+main .tweet-desk .tweet .head .title .text .top {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+main .tweet-desk .tweet .head .title .text .top {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+main .tweet-desk .tweet .head .title .text .top .tweet-name {
+  margin-right: 2px;
+}
+main .tweet-desk .tweet .head .title .text .top .verified {
+  font-weight: 400;
+  color: #1da1f2;
+}
+main .tweet-desk .tweet .head .title .text .top .verified.hide {
+  display: none;
+}
+main .tweet-desk .tweet .head .title .text .bottom {
+  color: #536471;
+}
+main .tweet-desk .tweet .head .dots {
+  color: #536471;
+}
+
+/* Message Desk */
+main .tweet-desk .tweet .content .tweet-message {
+  padding-top: 16px;
+  font-size: 23px;
+}
+main .tweet-desk .tweet .content .tweet-message .highlight {
+  color: #1b95e0;
+}
+main .tweet-desk .tweet .content .tweet-info {
+  color: #536471;
+  padding: 16px 0;
+  display: flex;
+}
+main .tweet-desk .tweet .stats {
+  border-top: 1px #eff3f4 solid;
+  color: #536471;
+  padding: 16px 4px;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .tweet-desk .tweet .stats .stat {
+  margin-right: 24px;
+}
+main .tweet-desk .tweet .stats .stat .count {
+  font-weight: 700;
+  color: #0f1419;
+}
+main .tweet-desk .tweet .stats .stat.hide {
+  display: none;
+}
+@media (max-width: 520px) {
+  main .tweet-desk .tweet .stats .stat {
+    margin-right: 12px;
+  }
+}
 
 /* Footer */
 footer {
