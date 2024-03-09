@@ -6,6 +6,7 @@ const username = document.getElementById("username");
 const message = document.getElementById("message");
 const time = document.getElementById("time");
 const date = document.getElementById("date");
+const client = document.getElementById("client");
 
 // All radio buttons
 const themeRadios = document.getElementsByName("theme-radio");
@@ -22,6 +23,7 @@ const tweetMessage = document.getElementById("tweet-message");
 
 const tweetTime = document.getElementById("tweet-time");
 const tweetDate = document.getElementById("tweet-date");
+const tweetClient = document.getElementById("tweet-client");
 
 // Download Button
 const download = document.getElementById("download");
@@ -150,6 +152,16 @@ function renderTime() {
   }
 }
 
+function renderClient() {
+  const clientValue = client.value.trim();
+
+  if (clientValue === "") {
+    tweetClient.innerText = "Twitter Web App";
+  } else {
+    tweetClient.innerText = clientValue;
+  }
+}
+
 /**
  * Function to set Theme of the Tweet Desk
  */
@@ -250,6 +262,7 @@ message.addEventListener("input", renderMessage);
 
 time.addEventListener("input", renderTime);
 date.addEventListener("input", renderDate);
+client.addEventListener("input", renderClient);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener("change", toggleTheme);
