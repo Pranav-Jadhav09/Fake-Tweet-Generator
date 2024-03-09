@@ -1,8 +1,8 @@
 ("use strict");
 
 // User Input Elements
-
-const tweetVerified = document.getElementById("tweet-verified");
+const time = document.getElementById("time");
+const date = document.getElementById("date");
 
 // All radio buttons
 const themeRadios = document.getElementsByName("theme-radio");
@@ -11,13 +11,30 @@ const verifiedRadios = document.getElementsByName("verified-radio");
 // Preview Elements
 const tweet = document.getElementById("tweet");
 const tweetBox = document.getElementById("tweet-box");
+const tweetVerified = document.getElementById("tweet-verified");
+
+const tweetTime = document.getElementById("tweet-time");
+const tweetDate = document.getElementById("tweet-date");
 
 // Required
 let themeColor = "#fff";
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 /**
- * Function to set Theme of the tweet desk
- * @param {*} ev
+ * Function to set Theme of the Tweet Desk
  */
 function toggleTheme(ev) {
   let choice;
@@ -61,6 +78,37 @@ function toggleVerified() {
     tweetVerified.classList.add("hide");
   }
 }
+
+/**
+ * Render Date in Tweet Desk
+ */
+function renderDate() {
+  const dateValue = date.value.trim();
+
+  if (dateValue === "") {
+    tweetDate.innerText = getCurrentDate();
+  } else {
+    tweetDate.innerText = dateValue;
+  }
+}
+
+/**
+ * Get Current Date
+ * @returns CurrentDate
+ */
+function getCurrentDate() {
+  const dateObj = new Date();
+  const date = dateObj.getDate();
+  const month = dateObj.getMonth();
+  const year = dateObj.getFullYear();
+
+  return `${MONTHS[month]} ${date}, ${year}`;
+}
+
+function setTimeStamp() {
+  renderDate();
+}
+setTimeStamp();
 
 // EventListeners
 
