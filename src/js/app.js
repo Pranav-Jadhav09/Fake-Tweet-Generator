@@ -61,7 +61,7 @@ function toggleTheme(ev) {
 }
 
 /**
- * Function to toggle verificatio badge
+ * Function to toggle verification badge
  */
 function toggleVerified() {
   let choice;
@@ -93,6 +93,19 @@ function renderDate() {
 }
 
 /**
+ * Render Time in Tweet Desk
+ */
+function renderTime() {
+  const timeValue = time.value.trim();
+
+  if (timeValue === "") {
+    tweetTime.innerText = getCurrentTime();
+  } else {
+    tweetTime.innerText = timeValue;
+  }
+}
+
+/**
  * Get Current Date
  * @returns CurrentDate
  */
@@ -105,12 +118,43 @@ function getCurrentDate() {
   return `${MONTHS[month]} ${date}, ${year}`;
 }
 
+/**
+ * Get Current Time
+ * @returns Current Time
+ */
+function getCurrentTime() {
+  let suffix;
+  const dateObj = new Date();
+  let hours = +dateObj.getHours();
+  let minutes = ("00" + dateObj.getMinutes()).slice(-2);
+
+  if (hours > 12) {
+    hours = hours - 12;
+    suffix = "PM";
+  } else {
+    if (hours === 0) {
+      hours = 12;
+      suffix = "AM";
+    } else if (hours === 12) {
+      suffix = "PM";
+    } else {
+      suffix = "AM";
+    }
+  }
+
+  return `${hours}:${minutes} ${suffix}`;
+}
+
+// Set Timestamp when page is loaded
 function setTimeStamp() {
+  renderTime();
   renderDate();
 }
 setTimeStamp();
 
 // EventListeners
+time.addEventListener("input", renderTime);
+date.addEventListener("input", renderDate);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener("change", toggleTheme);
