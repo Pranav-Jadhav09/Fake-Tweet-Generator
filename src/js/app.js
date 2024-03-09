@@ -75,7 +75,54 @@ function renderUsername() {
 /**
  * Render Message in Tweet Desk
  */
-function renderMessage() {}
+function renderMessage() {
+  const msgValue = message.value.trim();
+
+  if (msgValue === "") {
+    tweetMessage.innerText = "Generate convincing fake tweet images";
+  } else {
+    tweetMessage.innerText = "";
+
+    msgValue.split(" ").forEach((token) => {
+      if (token.match(/^@(\w){1,20}$/)) {
+        const spanEl = document.createElement("span");
+        spanEl.className = "highlight";
+        spanEl.innerText = token;
+
+        tweetMessage.append(spanEl);
+        tweetMessage.append(" ");
+      } else if (token.match(/^@(\w){21,}$/)) {
+        const spanEl = document.createElement("span");
+        spanEl.className = "highlight";
+        spanEl.innerText = token.slice(0, 21);
+
+        tweetMessage.append(spanEl);
+        tweetMessage.append(token.slice(21));
+        tweetMessage.append(" ");
+      } else if (token.match(/^@\w+/)) {
+        const spanEl = document.createElement("span");
+        spanEl.className = "highlight";
+        spanEl.innerText = token.match(/^@\w+/);
+
+        tweetMessage.append(spanEl);
+        tweetMessage.append(token.match(/(?<=\w)\W+/));
+        tweetMessage.append(" ");
+      } else {
+        tweetMessage.append(token);
+        tweetMessage.append(" ");
+      }
+    });
+
+    // To preserve line breaks
+    tweetMessage.innerHTML = tweetMessage.innerHTML.replace(/\n/g, "<br>\n");
+  }
+
+  let test = `hey there @elon how are you?`;
+
+  const characterCountEl = message.nextElementSibling.querySelector(".count");
+
+  characterCountEl.innerText = msgValue.length;
+}
 
 /**
  * Render Date in Tweet Desk
