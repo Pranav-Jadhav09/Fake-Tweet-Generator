@@ -1,6 +1,9 @@
 ("use strict");
 
 // User Input Elements
+const fullName = document.getElementById("name");
+const username = document.getElementById("username");
+const message = document.getElementById("message");
 const time = document.getElementById("time");
 const date = document.getElementById("date");
 
@@ -13,8 +16,15 @@ const tweet = document.getElementById("tweet");
 const tweetBox = document.getElementById("tweet-box");
 const tweetVerified = document.getElementById("tweet-verified");
 
+const tweetName = document.getElementById("tweet-name");
+const tweetUsername = document.getElementById("tweet-username");
+const tweetMessage = document.getElementById("tweet-message");
+
 const tweetTime = document.getElementById("tweet-time");
 const tweetDate = document.getElementById("tweet-date");
+
+// Download Button
+const download = document.getElementById("download");
 
 // Required
 let themeColor = "#fff";
@@ -32,6 +42,66 @@ const MONTHS = [
   "Nov",
   "Dec",
 ];
+
+/**
+ * Render Name in Tweet Desk
+ */
+function renderName() {
+  const nameValue = fullName.value.trim();
+
+  if (nameValue === "") {
+    tweetName.innerText = "Name";
+  } else {
+    tweetName.innerText = nameValue;
+  }
+
+  const characterCountEl = fullName.nextElementSibling.querySelector(".count");
+  characterCountEl.innerText = nameValue.length;
+}
+
+/**
+ * Render Username in Tweet Desk
+ */
+function renderUsername() {
+  const usernameValue = username.value.trim();
+
+  if (username === "") {
+    tweetUsername.innerText = "username";
+  } else {
+    tweetUsername.innerText = usernameValue;
+  }
+}
+
+/**
+ * Render Message in Tweet Desk
+ */
+function renderMessage() {}
+
+/**
+ * Render Date in Tweet Desk
+ */
+function renderDate() {
+  const dateValue = date.value.trim();
+
+  if (dateValue === "") {
+    tweetDate.innerText = getCurrentDate();
+  } else {
+    tweetDate.innerText = dateValue;
+  }
+}
+
+/**
+ * Render Time in Tweet Desk
+ */
+function renderTime() {
+  const timeValue = time.value.trim();
+
+  if (timeValue === "") {
+    tweetTime.innerText = getCurrentTime();
+  } else {
+    tweetTime.innerText = timeValue;
+  }
+}
 
 /**
  * Function to set Theme of the Tweet Desk
@@ -76,32 +146,6 @@ function toggleVerified() {
     tweetVerified.classList.remove("hide");
   } else {
     tweetVerified.classList.add("hide");
-  }
-}
-
-/**
- * Render Date in Tweet Desk
- */
-function renderDate() {
-  const dateValue = date.value.trim();
-
-  if (dateValue === "") {
-    tweetDate.innerText = getCurrentDate();
-  } else {
-    tweetDate.innerText = dateValue;
-  }
-}
-
-/**
- * Render Time in Tweet Desk
- */
-function renderTime() {
-  const timeValue = time.value.trim();
-
-  if (timeValue === "") {
-    tweetTime.innerText = getCurrentTime();
-  } else {
-    tweetTime.innerText = timeValue;
   }
 }
 
@@ -153,6 +197,10 @@ function setTimeStamp() {
 setTimeStamp();
 
 // EventListeners
+fullName.addEventListener("input", renderName);
+username.addEventListener("input", renderUsername);
+message.addEventListener("input", renderMessage);
+
 time.addEventListener("input", renderTime);
 date.addEventListener("input", renderDate);
 
