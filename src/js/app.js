@@ -1,6 +1,10 @@
 ("use strict");
 
 // User Input Elements
+const avatar = document.getElementById("avatar");
+const fileName = document.getElementById("file-name");
+const reset = document.getElementById("reset");
+
 const fullName = document.getElementById("name");
 const username = document.getElementById("username");
 const message = document.getElementById("message");
@@ -15,6 +19,8 @@ const verifiedRadios = document.getElementsByName("verified-radio");
 // Preview Elements
 const tweet = document.getElementById("tweet");
 const tweetBox = document.getElementById("tweet-box");
+
+const tweetAvatar = document.getElementById("tweet-avatar");
 const tweetVerified = document.getElementById("tweet-verified");
 
 const tweetName = document.getElementById("tweet-name");
@@ -44,6 +50,34 @@ const MONTHS = [
   "Nov",
   "Dec",
 ];
+
+/*
+ *Show the uploaded file's name
+ */
+function showFileName(name) {
+  fileName.classList.add("show");
+  fileName.innerText = name;
+}
+
+/*
+ * Render Profile Picture in Tweet
+ */
+function renderProfilePic() {
+  const [file] = avatar.files;
+  if (file) {
+    showFileName(file.name);
+    tweetAvatar.src = URL.createObjectURL(file);
+  }
+}
+
+/*
+ * Reset the profile picture to default
+ */
+function resetProfilePic() {
+  fileName.innerText = "";
+  fileName.classList.remove("show");
+  tweetAvatar.src = "/src/assets/silhoutte.png";
+}
 
 /**
  * Render Name in Tweet Desk
@@ -152,6 +186,9 @@ function renderTime() {
   }
 }
 
+/**
+ * Functio to set Client Device
+ */
 function renderClient() {
   const clientValue = client.value.trim();
 
@@ -256,6 +293,9 @@ function setTimeStamp() {
 setTimeStamp();
 
 // EventListeners
+avatar.addEventListener("change", renderProfilePic);
+reset.addEventListener("click", resetProfilePic);
+
 fullName.addEventListener("input", renderName);
 username.addEventListener("input", renderUsername);
 message.addEventListener("input", renderMessage);
