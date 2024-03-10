@@ -8,9 +8,14 @@ const reset = document.getElementById("reset");
 const fullName = document.getElementById("name");
 const username = document.getElementById("username");
 const message = document.getElementById("message");
+
 const time = document.getElementById("time");
 const date = document.getElementById("date");
 const client = document.getElementById("client");
+
+const retweets = document.getElementById("retweets");
+const quotes = document.getElementById("quotes");
+const likes = document.getElementById("likes");
 
 // All radio buttons
 const themeRadios = document.getElementsByName("theme-radio");
@@ -30,6 +35,10 @@ const tweetMessage = document.getElementById("tweet-message");
 const tweetTime = document.getElementById("tweet-time");
 const tweetDate = document.getElementById("tweet-date");
 const tweetClient = document.getElementById("tweet-client");
+
+const tweetRetweets = document.getElementById("tweet-retweets");
+const tweetQuotes = document.getElementById("tweet-quotes");
+const tweetLikes = document.getElementById("tweet-likes");
 
 // Download Button
 const download = document.getElementById("download");
@@ -51,8 +60,31 @@ const MONTHS = [
   "Dec",
 ];
 
+/**
+ * Formats a number for display with thousands separators and abbreviations for millions, billions, and trillions.
+ * @param {Number} num The number to be formatted.
+ * @param {Number} fixed (Optional) The desired number of decimal places (defaults to 0).
+ * @returns {String} The formatted number string.
+ */
+function numberFormatter(num, fixed = 0) {
+  if (num === null || num === 0) return num === 0 ? "0" : null;
+
+  const suffixes = ["", "K", "M", "B", "T"];
+  const exponent = Math.min(Math.floor(Math.log10(Math.abs(num)) / 3), 4);
+
+  // Handle single, double, and triple-digit numbers without decimals
+  if (exponent === 0 && Math.abs(num) < 1000) {
+    return num.toFixed(0); // Remove ".0" for small numbers
+  }
+
+  const formattedNum = Math.abs(num / Math.pow(10, exponent * 3)).toFixed(
+    Math.max(fixed, 1)
+  );
+
+  return formattedNum + suffixes[exponent];
+}
 /*
- *Show the uploaded file's name
+ * Render/Show the uploaded file's name
  */
 function showFileName(name) {
   fileName.classList.add("show");
@@ -187,7 +219,7 @@ function renderTime() {
 }
 
 /**
- * Functio to set Client Device
+ * Render to set Client Device
  */
 function renderClient() {
   const clientValue = client.value.trim();
@@ -292,6 +324,30 @@ function setTimeStamp() {
 }
 setTimeStamp();
 
+/**
+ * Render Retweets in Tweet Desk
+ */
+function renderRetweets() {
+  tweetRetweets.parentElement.classList.remove("hide");
+  let retweetsValue = retweets.value;
+
+  if (retweetsValue === "") {
+    tweetRetweets.innerText = "99";
+  } else {
+    retweetsValue = +retweetsValue;
+
+    if (retweetsValue >= 0) {
+      if (retweetsValue === 0) {
+        tweetRetweets.parentElement.classList.add("hide");
+      } else {
+        tweetRetweets.innerText = numberFormatter(retweetsValue);
+      }
+    } else {
+      tweetRetweets.innerText = "99";
+    }
+  }
+}
+
 // EventListeners
 avatar.addEventListener("change", renderProfilePic);
 reset.addEventListener("click", resetProfilePic);
@@ -303,6 +359,10 @@ message.addEventListener("input", renderMessage);
 time.addEventListener("input", renderTime);
 date.addEventListener("input", renderDate);
 client.addEventListener("input", renderClient);
+
+retweets.addEventListener("input", renderRetweets);
+// quotes.addEventListener("input");
+// likes.addEventListener("input");
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener("change", toggleTheme);
