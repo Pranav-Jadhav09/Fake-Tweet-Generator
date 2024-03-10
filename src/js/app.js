@@ -401,7 +401,7 @@ function renderLikes() {
  * Generate filenames for the image which is to be downloaded
  */
 function generateFilename() {
-  retweets`tweet${Math.floor(Math.random() * 90000) + 10000}`;
+  return `tweet${Math.floor(Math.random() * 90000) + 10000}`;
 }
 
 // Download it to the local Machine
@@ -426,6 +426,21 @@ function saveAs(url, filename) {
 }
 
 // Take Screenshot of the Tweet Desk
+function takeScreenShot() {
+  window.scrollTo(0, 0);
+
+  html2canvas(document.querySelector(".tweet"), {
+    allowTaint: true,
+    backgroundColor: themeColor,
+    useCORS: true,
+    scrollX: -window.scrollX,
+    scrollY: -window.scrollY,
+    windowWidth: document.documentElement.offsetWidth,
+    windowHeight: document.documentElement.offsetHeight,
+  }).then((canvas) => {
+    saveAs(canvas.toDataURL(), generateFilename());
+  });
+}
 
 // EventListeners
 avatar.addEventListener("change", renderProfilePic);
@@ -442,6 +457,8 @@ client.addEventListener("input", renderClient);
 retweets.addEventListener("input", renderRetweets);
 quotes.addEventListener("input", renderQuotes);
 likes.addEventListener("input", renderLikes);
+
+download.addEventListener("click", takeScreenShot);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener("change", toggleTheme);
