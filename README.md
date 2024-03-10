@@ -12,13 +12,13 @@
 
 <br />
 
-### Description
+## Description
 
 With the Fake Tweet Generator tool you can create convincing fake tweet images. This tool is completely customizable so you can choose any name, any content, any time, any number of likes and many more. See it <a href="https://forkify-app-modern.vercel.app/"><strong>➥ Live on vercel.app</strong></a>
 
 <br />
 
-### Tech Stack
+## Tech Stack
 
 ![HTML5](https://img.shields.io/badge/HTML_5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS_3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
