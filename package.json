@@ -1,0 +1,16 @@
+{
+  "name": "tweetgen",
+  "version": "1.0.0",
+  "description": "With the Fake Tweet Generator tool you can create convincing fake tweet images. This tool is completely customizable so you can choose any name, any content, any time, any number of likes and many more.",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "jrpranav",
+  "license": "GPL-3.0 license",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  }
+}
