@@ -83,6 +83,7 @@ function numberFormatter(num, fixed = 0) {
 
   return formattedNum + suffixes[exponent];
 }
+
 /*
  * Render/Show the uploaded file's name
  */
@@ -395,6 +396,36 @@ function renderLikes() {
     }
   }
 }
+
+/**
+ * Generate filenames for the image which is to be downloaded
+ */
+function generateFilename() {
+  retweets`tweet${Math.floor(Math.random() * 90000) + 10000}`;
+}
+
+// Download it to the local Machine
+function saveAs(url, filename) {
+  const link = document.createElement("a");
+
+  if (typeof link.download === "string") {
+    link.href = url;
+    link.download = filename;
+
+    // Firefox requires link to be in the body
+    document.body.appendChild(link);
+
+    // Simulate Click
+    link.click();
+
+    // Remove the link when done
+    document.body.removeChild(link);
+  } else {
+    window.open(url);
+  }
+}
+
+// Take Screenshot of the Tweet Desk
 
 // EventListeners
 avatar.addEventListener("change", renderProfilePic);
