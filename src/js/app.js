@@ -348,6 +348,54 @@ function renderRetweets() {
   }
 }
 
+/**
+ * Render Quotes in Tweet Desk
+ */
+function renderQuotes() {
+  tweetQuotes.parentElement.classList.remove("hide");
+  let quotesValue = quotes.value;
+
+  if (quotesValue === "") {
+    tweetQuotes.innerText = "88";
+  } else {
+    quotesValue = +quotesValue;
+
+    if (quotesValue >= 0) {
+      if (quotesValue === 0) {
+        tweetQuotes.parentElement.classList.add("hide");
+      } else {
+        tweetQuotes.innerText = numberFormatter(quotesValue);
+      }
+    } else {
+      tweetQuotes.innerText = "99";
+    }
+  }
+}
+
+/**
+ * Render Likes in Tweet Desk
+ */
+function renderLikes() {
+  tweetLikes.parentElement.classList.remove("hide");
+  let likesValue = likes.value;
+
+  if (likesValue === "") {
+    tweetLikes.innerText = "88";
+  } else {
+    likesValue = +likesValue;
+
+    if (likesValue >= 0) {
+      if (likesValue === 0) {
+        tweetLikes.parentElement.classList.add("hide");
+      } else {
+        tweetLikes.innerText = numberFormatter(likesValue);
+      }
+    } else {
+      tweetLikes.innerText = "11";
+    }
+  }
+}
+
 // EventListeners
 avatar.addEventListener("change", renderProfilePic);
 reset.addEventListener("click", resetProfilePic);
@@ -361,8 +409,8 @@ date.addEventListener("input", renderDate);
 client.addEventListener("input", renderClient);
 
 retweets.addEventListener("input", renderRetweets);
-// quotes.addEventListener("input");
-// likes.addEventListener("input");
+quotes.addEventListener("input", renderQuotes);
+likes.addEventListener("input", renderLikes);
 
 for (let i = 0; i < themeRadios.length; i++) {
   themeRadios[i].addEventListener("change", toggleTheme);
