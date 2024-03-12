@@ -5,14 +5,10 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Pranav_Jadhav09?style=social)](https://twitter.com/Pranav_Jadhav09)
 
 <img src="./src/assets/logo.svg" alt="Logo" height="80"  >
-
-## Fake Tweet Generator
-
 </div>
 
+## Fake Tweet Generator
 <br />
-
-## Description
 
 With the Fake Tweet Generator tool you can create convincing fake tweet images. This tool is completely customizable so you can choose any name, any content, any time, any number of likes and many more. See it <a href="https://forkify-app-modern.vercel.app/"><strong>➥ Live on vercel.app</strong></a>
 
