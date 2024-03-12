@@ -10,7 +10,9 @@
   "author": "jrpranav",
   "license": "GPL-3.0 license",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
     "parcel": "^2.12.0"
   }
 }

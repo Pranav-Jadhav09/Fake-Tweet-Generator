@@ -1,5 +1,7 @@
 #misc
 
+dist
 .vscode
 .DS_Store
 node_modules
+.parcel-cache
