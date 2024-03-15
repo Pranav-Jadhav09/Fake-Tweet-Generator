@@ -29,7 +29,7 @@ With the Fake Tweet Generator tool you can create convincing fake tweet images. 
 
 ## Features...
 
-### Beta version - 0.0.1
+### Beta version - 0.1
 
 - `Profile Pic` → `Upload` your profile picture you can also `reset` if required.
 - `Name & Username` → Abled to add `name` & `@username`
@@ -39,10 +39,17 @@ With the Fake Tweet Generator tool you can create convincing fake tweet images. 
 - `Set Counts` → Retweet Count, Quote Tweet Count, ❤️ Like Count
 - `Download` → Your tweet will be displayed in a clear and easy-to-read format, just like a real tweet!
 
-### Beta version - 0.0.2 [Coming Soon...]
+### Beta version - 0.2 [Coming Soon...]
 
 - `Update UI` → Home Page, Tweet Creation Page and About us page.
 - `Updated Input fields` → Date, Time, Options.
+- `Audio Video` → Abled to add in the tweet desk.
+- `Tech Stack` → Shift from modern JavaScript to React + MERN (in general)
+
+### Beta version - 0.3 [Coming Soon...]
+
+- `Creation` → Tweet, Threads, Suspension.
+- `AI Integration` → AI based content generation
 
 <br />
 
