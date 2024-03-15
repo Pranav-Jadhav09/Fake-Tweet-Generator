@@ -8,6 +8,7 @@
 </div>
 
 ## Fake Tweet Generator
+
 <br />
 
 With the Fake Tweet Generator tool you can create convincing fake tweet images. This tool is completely customizable so you can choose any name, any content, any time, any number of likes and many more. See it <a href="https://forkify-app-modern.vercel.app/"><strong>➥ Live on vercel.app</strong></a>
@@ -28,13 +29,13 @@ With the Fake Tweet Generator tool you can create convincing fake tweet images. 
 
 ## Features...
 
-- Display `number of pages` between the pagination buttons
-- Ability to `sort` search results by duration or number of ingredients
-- Perform `ingredient validation` in view, before submitting the form
-- `Improve recipe ingredient input:` separate in multiple fields and allow more than 6 ingredients
-- `Shopping list feature:` button on recipe to add ingredients to a list
-- `Weekly meal planning feature:` assign recipes to the next 7 days and show on a weekly calender
-- `Get nutrition data` on each ingredient form spoonacular API (`https://spoonacular.com/food-api`) and calculate total calories of recipe
+- `Profile Picture` → Upload your profile picture you can also reset if required.
+- `Name & Username` → Abled to add name & @username
+- `Customizable Text` → ✍️ Write a convincing tweet
+- `⏱️ Custom Time` → Set the time: time_input (e.g. 3:12 PM)
+- `Custom Date` → Pick a date: date_input (e.g. Aug 29, 2024)
+- `Set Counts` → Retweet Count, Quote Tweet Count, ❤️ Like Count
+  `✨ Beautiful & Readable` → Your tweet will be displayed in a clear and easy-to-read format, just like a real tweet!
 
 <br />
 
