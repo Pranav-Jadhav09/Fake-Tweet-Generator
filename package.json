@@ -1,5 +1,5 @@
 {
-  "name": "tweetgen",
+  "name": "xgen.ai",
   "version": "1.0.0",
   "description": "With the Fake Tweet Generator tool you can create convincing fake tweet images. This tool is completely customizable so you can choose any name, any content, any time, any number of likes and many more.",
   "default": "index.html",
