@@ -29,13 +29,20 @@ With the Fake Tweet Generator tool you can create convincing fake tweet images. 
 
 ## Features...
 
-- `Profile Picture` → Upload your profile picture you can also reset if required.
-- `Name & Username` → Abled to add name & @username
+### Beta version - 0.0.1
+
+- `Profile Pic` → `Upload` your profile picture you can also `reset` if required.
+- `Name & Username` → Abled to add `name` & `@username`
 - `Customizable Text` → ✍️ Write a convincing tweet
 - `⏱️ Custom Time` → Set the time: time_input (e.g. 3:12 PM)
 - `Custom Date` → Pick a date: date_input (e.g. Aug 29, 2024)
 - `Set Counts` → Retweet Count, Quote Tweet Count, ❤️ Like Count
-  `✨ Beautiful & Readable` → Your tweet will be displayed in a clear and easy-to-read format, just like a real tweet!
+- `Download` → Your tweet will be displayed in a clear and easy-to-read format, just like a real tweet!
+
+### Beta version - 0.0.2 [Coming Soon...]
+
+- `Update UI` → Home Page, Tweet Creation Page and About us page.
+- `Updated Input fields` → Date, Time, Options.
 
 <br />
 
